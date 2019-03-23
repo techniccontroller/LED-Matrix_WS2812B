@@ -23,17 +23,6 @@
 // own datatype for matrix movement (snake and spiral)
 enum direction {right, left, up, down};
 
-
-
-// six predefined colors (red, yellow, purple, orange, green, blue) 
-const uint16_t colors[] = {
-  matrix.Color(255, 0, 0),
-  matrix.Color(200, 200, 0),
-  matrix.Color(255, 0, 200),
-  matrix.Color(255, 128, 0), 
-  matrix.Color(0, 128, 0), 
-  matrix.Color(0, 0, 255) };
-
 // width of the led matrix
 const int width = 6;
 // height of the led matrix
@@ -51,6 +40,15 @@ Adafruit_NeoMatrix matrix = Adafruit_NeoMatrix(width, height, PIN,
   NEO_GRB            + NEO_KHZ800);
 
 SoftwareSerial BTserial(3, 4); // RX | TX
+
+// six predefined colors (red, yellow, purple, orange, green, blue) 
+const uint16_t colors[] = {
+  matrix.Color(255, 0, 0),
+  matrix.Color(200, 200, 0),
+  matrix.Color(255, 0, 200),
+  matrix.Color(255, 128, 0), 
+  matrix.Color(0, 128, 0), 
+  matrix.Color(0, 0, 255) };
 
 void setup() {
   matrix.begin();
